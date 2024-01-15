@@ -1,0 +1,100 @@
+header{
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.slider ul{
+  width: 100%;
+  display: flex;
+  
+}
+
+.slider ul li{
+  margin-block: 0.5rem;
+  margin-inline: 1.5rem;
+  list-style: none;
+  
+}
+.slider ul li a{
+  font-size: 20px;
+  font-weight:normal;
+  text-decoration: none;
+  color: #495e57;
+}
+
+.menu_icon .menu{
+  display: none;
+
+  font-size: 30px;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding: 5px;
+
+}
+
+.closed{
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+  color: #495e57;
+  font-size: 30px;
+   cursor: pointer;
+
+}
+
+@media (max-width: 850px){
+  .slider{
+  position: fixed;
+  min-width: 50%;
+  height: 100vh;
+  top: 0%;
+  right: -50%;
+  background-color: #fff;
+  transition: 0.5s ease-in-out;
+  
+}
+
+.slider.active{
+  right: 0%;
+  transition: 1s ease-in-out;
+}
+
+.slider ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.slider ul li{
+  margin-block: 1.5rem;
+  list-style: none
+}
+.slider ul li a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #495e57;
+}
+
+.menu_icon .menu{
+  display: flex;
+  font-size: 30px;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding: 5px;
+
+}
+
+.closed{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: #495e57;
+  font-size: 30px;
+  cursor: pointer;
+
+}
+}

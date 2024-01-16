@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import "./reservation.css"
+import React, { useState } from 'react';
+import "./reservation.css";
 import BookingForm from '../reservation/BookingForm';
+import { Link } from 'react-router-dom';
 
 const BookingPage = () => {
   const [bookingDetails, setBookingDetails] = useState("")
@@ -9,9 +10,9 @@ const BookingPage = () => {
   
   const handleReservation = (formData) => {
     
-    console.log('Form data in BookingPage:', formData);
+
     
-    setBookingDetails(`your booking for date ${formData.date} has been successful!!`)
+    // setBookingDetails(`your booking for date ${formData.date} has been successful!!`)
   };
 
 

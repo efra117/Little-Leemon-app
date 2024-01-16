@@ -1,11 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 const BookingForm = (props) => {
   // Initialize state for form fields
   const [formData, setFormData] = useState({
     date: "",
     time: props.availableTimes[0],
-    guests: 2,
+    guests: 1,
     occasion: "bday",
   });
 
@@ -26,6 +27,7 @@ const BookingForm = (props) => {
     props.onReservation(formData);
   };
 
+ 
   return (
     <form className="reservationForm" onSubmit={handleSubmit}>
       <label htmlFor="date">Date</label>
@@ -45,16 +47,12 @@ const BookingForm = (props) => {
         {props.availableTimes.map((e) => (
           <option value={Number(e)}>{e} PM</option>
         ))}
-        {/* <option value="12">12:00 PM</option>
-          <option value="2">2:00 PM</option>
-          <option value="4">4:00 PM</option>
-          <option value="6">6:00 PM</option>
-          <option value="8">8:00 PM</option> */}
+       
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
         type="number"
-        min="2"
+        min="1"
         max="15"
         id="guests"
         value={formData.guests}
@@ -70,10 +68,12 @@ const BookingForm = (props) => {
         <option value="bday">Birthday</option>
         <option value="aniversary">Aniversary</option>
       </select>
-      <button className="buttongap" type="submit">
-        {" "}
-        Make a Reservation{" "}
-      </button>
+      <Link to="/confirmation">
+        <button className="buttongap" type="submit">Make a Reservation</button>
+      </Link>
+      
+      
+      
     </form>
   );
 }

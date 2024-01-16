@@ -1,0 +1,11 @@
+.confirmation{
+    color: white;
+    background-color: #495e57;
+    display: grid;
+    grid-template-columns: none;
+    justify-content: center;
+}
+
+.confirmation h1{
+    padding: 40px;
+}

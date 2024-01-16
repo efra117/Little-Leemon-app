@@ -42,7 +42,11 @@ function Footer() {
           </div>
           <div className="col-3">
             <h3>Contact us</h3>
-            <p>address...India</p>
+            <ul className="footer-links">
+              <li>Tel: 55 55 55 55</li>
+              <li>Little_Lemon@lemon.com</li>
+            </ul>
+            
           </div>
           <div className="col-4">
             <h3>Connect with us</h3>
